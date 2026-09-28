@@ -10,7 +10,9 @@
 ## Задание 2
 
 Не очень понял:
+
 > использующего созданный ранее PVC
+
 Мы же не создавали PVC, это опечатка?
 
 ### 2.1, 2.2, 2.3
@@ -27,4 +29,4 @@ PVC был удален, а т.к. была политика `Retain` то са�
 ### 2.5
 Физически файл остался, удалился только объет PV из K8S. Причина: local + Retain policy.
 
-<img width="960" height="1260" alt="image" src="https://github.com/erant-netology-courses/kuber-2.1/blob/main/2.5.jpg?raw=true" />
+<img width="960" height="1060" alt="image" src="https://github.com/erant-netology-courses/kuber-2.1/blob/main/2.5.jpg?raw=true" />
