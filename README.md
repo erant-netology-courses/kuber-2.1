@@ -30,3 +30,9 @@ PVC был удален, а т.к. была политика `Retain` то са�
 Физически файл остался, удалился только объет PV из K8S. Причина: local + Retain policy.
 
 <img width="960" height="1060" alt="image" src="https://github.com/erant-netology-courses/kuber-2.1/blob/main/2.5.jpg?raw=true" />
+
+### Задание 3
+
+Сделал с microk8s-hostpath
+
+<img width="960" height="1260" alt="image" src="https://github.com/erant-netology-courses/kuber-2.1/blob/main/3.jpg?raw=true" />
