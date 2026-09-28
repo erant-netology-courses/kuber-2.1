@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-exchange-pvc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: data-exchange-pvc
+  template:
+    metadata:
+      labels:
+        app: data-exchange-pvc
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
+        command: ['sh', '-c', 'while true; do echo "$(date) hello from busybox" >> /shared/data.txt; sleep 5; done']
+        volumeMounts:
+        - name: shared
+          mountPath: /shared
+      - name: multitool
+        image: wbitt/network-multitool
+        volumeMounts:
+        - name: shared
+          mountPath: /shared
+      volumes:
+      - name: shared
+        persistentVolumeClaim:
+          claimName: data-pvc
